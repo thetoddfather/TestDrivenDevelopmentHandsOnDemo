@@ -12,11 +12,16 @@ class primeFactorsTest {
 
     @Test fun factors() {
         // test that an empty list is returned upon execution
-        assertThat(factorsOf(1), `is` (emptyList()))
+        assertThat(factorsOf(1), `is` (emptyList()))    // the prime factor of 1 is empty
+        assertThat(factorsOf(2), `is` (listOf(2)))      // the prime factor of 2 is just the number 2
     }
 
     private fun factorsOf(i: Int): List<Int> {
-        return emptyList()
+        val factors = mutableListOf<Int>()
+
+        if (i>1)
+            factors.add(2)
+        return factors
     }
 
 
